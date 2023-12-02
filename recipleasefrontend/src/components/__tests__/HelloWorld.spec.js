@@ -1,11 +1,12 @@
-import { describe, it, expect } from 'vitest'
+import { shallowMount } from '@vue/test-utils'
+import HelloWorld from '@/components/HelloWorld.vue'
 
-import { mount } from '@vue/test-utils'
-import HelloWorld from '../HelloWorld.vue'
-
-describe('HelloWorld', () => {
-  it('renders properly', () => {
-    const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+describe('HelloWorld.vue', () => {
+  it('renders props.msg when passed', () => {
+    const msg = 'New message'
+    const wrapper = shallowMount(HelloWorld, {
+      props: { msg }
+    })
+    expect(wrapper.text()).toMatch(msg)
   })
 })
