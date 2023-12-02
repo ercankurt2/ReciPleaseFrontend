@@ -2,8 +2,12 @@
   "name": "recipleasefrontend",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
