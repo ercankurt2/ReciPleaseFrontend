@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Frontend des Projekts ReciPlease",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "build": "vue-cli-service build",
@@ -31,11 +32,13 @@
     "vue-template-compiler": "^2.7.15"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
     "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/vue3-jest": "^29.2.6",
     "babel-jest": "^27.5.1",
     "jest-fetch-mock": "^3.0.3",
-    "vue-jest": "^3.0.7"
+    "vue-jest": "^4.0.1"
   }
 }
