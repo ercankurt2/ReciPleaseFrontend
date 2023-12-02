@@ -1,20 +1,36 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="ReciPlease logo" class="logo" src="@/assets/reciplease_logo.png" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Hello World - Willkommen bei ReciPlease" />
-    </div>
-  </header>
-
-  <RouterView />
+  <navbar></navbar>
+  <router-view/>
 </template>
 
-<style scoped>
+<script>
+import Navbar from '@/components/Navbar.vue'
 
+export default {
+  name: 'App',
+  components: { Navbar }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+  #nav {
+    padding: 30px;
+  }
+
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
 </style>

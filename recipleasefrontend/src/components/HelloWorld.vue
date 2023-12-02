@@ -1,14 +1,18 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'HelloWorld',
+    props: {
+      msg: String
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
